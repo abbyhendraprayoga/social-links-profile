@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+:root {
+  --green: hsl(75, 100%, 44%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--grey-900);
+  .profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.9em;
+    background-color: var(--grey-800);
+    padding: 0.5em 0 0.5em 0;
+    margin: 5em 2em 5em 2em;
+    .profile-section {
+      text-align: center;
+      margin: 1rem;
+      .profile-name {
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .profile-location {
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 500;
+        margin: 10px 0 20px 0;
+      }
+      .profile-bio {
+        color: white;
+        font-size: 13px;
+        width: auto;
+        font-weight: 200;
+      }
+      .profile-img-section {
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 5em;
+        height: 5em;
+        margin-bottom: 1em;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+    }
+    .link-section {
+      width: 100%;
+      ul {
+        list-style: none;
+        text-align: center;
+        li {
+          margin: 1rem;
+          border-radius: 5px;
+          background-color: var(--grey-700);
+
+          &:hover {
+            background-color: var(--green);
+            transition: 0.3s ease-in-out;
+          }
+
+          a.link {
+            display: block;
+            padding: 10px 15px;
+            font-weight: 400;
+            font-size: 10px;
+            text-decoration: none;
+            color: #ffffff;
+
+            &:active {
+              background-color: var(--green);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    .profile-container {
+      width: 65%;
+      min-height: fit-content;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    .profile-container {
+      width: 35%;
+    }
+  }
+}
